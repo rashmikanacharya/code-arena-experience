@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -53,9 +54,7 @@
     @apply font-bold tracking-tight font-chakra;
   }
   
-  .text-glow {
-    text-shadow: 0 0 10px rgba(77, 144, 214, 0.5);
-  }
+  /* Removed text-glow class */
   
   .box-glow {
     box-shadow: 0 0 15px rgba(77, 144, 214, 0.3);
@@ -101,5 +100,36 @@
   
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Adding animated background effects */
+  .animated-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animated-bg::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(77, 144, 214, 0.1) 0%, rgba(18, 18, 18, 0) 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 }

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Swords } from 'lucide-react';
+import { Code, Trophy } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -29,6 +29,17 @@ const Header = () => {
           whileTap={{ scale: 0.95 }}
         >
           About Us
+        </motion.span>
+        
+        <motion.span 
+          className="hidden md:block text-muted-foreground hover:text-codeWhite cursor-pointer transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <div className="flex items-center gap-1">
+            <Trophy className="h-4 w-4 text-codeBlue" />
+            Leaderboard
+          </div>
         </motion.span>
         
         <motion.button
