@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,44 +25,27 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				primary: 'hsl(var(--primary))',
+				'primary-foreground': 'hsl(var(--primary-foreground))',
+				secondary: 'hsl(var(--secondary))',
+				'secondary-foreground': 'hsl(var(--secondary-foreground))',
+				destructive: 'hsl(var(--destructive))',
+				'destructive-foreground': 'hsl(var(--destructive-foreground))',
+				muted: 'hsl(var(--muted))',
+				'muted-foreground': 'hsl(var(--muted-foreground))',
+				accent: 'hsl(var(--accent))',
+				'accent-foreground': 'hsl(var(--accent-foreground))',
+				popover: 'hsl(var(--popover))',
+				'popover-foreground': 'hsl(var(--popover-foreground))',
+				card: 'hsl(var(--card))',
+				'card-foreground': 'hsl(var(--card-foreground))',
+				
+				// Custom colors for CODE CLASH
+				codeDark: '#121212',
+				codeBlack: '#0A0A0A',
+				codeBlue: '#4D90D6',
+				codeGray: '#1E1E1E',
+				codeWhite: '#FFFFFF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,26 +54,49 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-light': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'gradient-xy': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'left center'
 					},
-					to: {
-						height: '0'
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-light': 'pulse-light 3s ease-in-out infinite',
+				'wiggle': 'wiggle 3s ease-in-out infinite',
+				'gradient-xy': 'gradient-xy 3s ease infinite'
+			},
+			backgroundImage: {
+				'hero-pattern': 'linear-gradient(90deg, rgba(18,18,18,0.95) 0%, rgba(18,18,18,0.8) 100%)',
+				'card-gradient': 'linear-gradient(180deg, rgba(30,30,30,1) 0%, rgba(20,20,20,1) 100%)',
+				'button-gradient': 'linear-gradient(45deg, #4D90D6, #3a7ab8)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
