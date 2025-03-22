@@ -8,7 +8,7 @@ import { useRef } from 'react';
 const BlueGlowSpan = ({ children }: { children: React.ReactNode }) => (
   <span className="text-codeBlue relative inline-block">
     {children}
-    <span className="absolute inset-0 blur-sm opacity-70 -z-10 bg-codeBlue rounded-full"></span>
+    {/* Removed the blur effect span */}
   </span>
 );
 
