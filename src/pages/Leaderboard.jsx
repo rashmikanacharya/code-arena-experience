@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
 import { Trophy, Star, Award, Users } from 'lucide-react';
 
 const LeaderboardRow = ({ rank, name, points, wins }) => {

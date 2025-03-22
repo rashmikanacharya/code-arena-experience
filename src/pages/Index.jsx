@@ -1,10 +1,10 @@
 
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Cards from '../components/Cards';
-import Footer from '../components/Footer';
+import Header from '../components/Header.jsx';
+import Hero from '../components/Hero.jsx';
+import Cards from '../components/Cards.jsx';
+import Footer from '../components/Footer.jsx';
 
 const Index = () => {
   const controls = useAnimation();
